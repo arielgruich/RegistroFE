@@ -20,13 +20,13 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies',
           title: 'Dashboard'
         }
       })
-      .state('home.profile', {
-        url: '/profile',
-        templateUrl: 'app/views/profile.html',
-        controller: 'ProfileController',
+      .state('home.interaccion', {
+        url: '/interaccion',
+        templateUrl: 'app/views/interaccion.html',
+        controller: 'InteraccionController',
         controllerAs: 'vm',
         data: {
-          title: 'Profile'
+          title: 'Interaccion'
         }
       })
       .state('home.table', {

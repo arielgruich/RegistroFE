@@ -1,0 +1,55 @@
+<!-- TODO: Add validations -->
+<ng-controller="ProfileController as vm" class="md-padding" layout="row" layout-sm="column">
+  <md-progress-linear class="widget-progress md-accent" md-mode="determinate"
+                      value="{{vm.determinateValue}}" ng-show="vm.showProgress">
+  </md-progress-linear>
+
+<!--</md-content>
+<md-content class="md-padding as vm">-->
+   <form name="userForm">
+        <div layout layout-sm="column">
+          <md-input-container>
+            <select>
+              <option ng-repeat="x in vm.user.usuario">{{x}}</option>
+            </select>
+          </md-input-container>
+        </div>
+
+        <div layout layout-sm="column">
+            <md-input-container flex="80">
+                <label>Nombre</label>
+                <input ng-model="vm.user.nombre">
+            </md-input-container>
+        </div>
+
+        <div layout layout-sm="column">
+            <md-input-container flex>
+                <label>Telefono</label>
+                <input ng-model="vm.user.telefono1">
+            </md-input-container>
+        </div>
+
+        <div layout layout-sm="column">
+          <md-content><label><b>Canal</b></label></md-content>
+        </div>
+
+        <md-radio-group ng-model="vm.user.canal">
+            <md-radio-button class="md-accent" value="Facebook">Facebook</md-radio-button>
+            <md-radio-button class="md-accent" value="Linea 800">Linea 800</md-radio-button>
+            <md-radio-button class="md-accent" value="Central Telefonica">Central Telefonica</md-radio-button>
+        </md-radio-group>
+
+        <div layout layout-sm="column">
+          <md-content><label><b>Tipo</b></label></md-content>
+        </div>
+        <md-radio-group ng-model="vm.user.tipo">
+            <md-radio-button class="md-accent" value="Consulta">Consulta</md-radio-button>
+            <md-radio-button class="md-accent" value="Denuncia">Denuncia</md-radio-button>
+            <md-radio-button class="md-accent" value="Requerimiento">Requerimiento</md-radio-button>
+        </md-radio-group>
+
+        <md-button class="md-raised md-warn" ng-click="vm.performProgress()">
+            Guardar Interaccion
+        </md-button>
+    </form>
+</md-content>
