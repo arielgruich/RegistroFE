@@ -1,7 +1,6 @@
 (function(){
-
   angular
-    .module('app', ['angularSoap'])
+    .module('app')
     .controller('InteraccionController', [
         '$mdDialog', '$interval',
       InteraccionController
@@ -12,10 +11,10 @@
     vm.user = {
       usuario: ["Eva", "Alisson", "Silvia"],
       nombre: '',
-      telefono1: '' ,
-      canal: '' ,
-      tipo: '' ,
-      registro_bitacora: '127.0.0.1' ,
+      telefono1: '',
+      canal: '',
+      tipo: '',
+      registro_bitacora: '127.0.0.1',
     };
     vm.buttonEnabled = false;
     vm.showProgress = false;
@@ -35,11 +34,10 @@
         }, 50, 0, true);
     }
 
-    
     function showAlert() {
         alert = $mdDialog.alert({
             title: 'Guardado!',
-            content: vm.reloadServer + " Interaccion Registrada",
+            content: vm.reloadServer + " Interaccion Registrada.",
             ok: 'Cerrar'
         });
         $mdDialog
