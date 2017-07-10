@@ -2,12 +2,14 @@
   angular
     .module('app')
     .controller('InteraccionController', [
-        '$mdDialog', '$interval',
-      InteraccionController
+        '$mdDialog', '$interval','InteraccionService', InteraccionController
     ]);
 
-  function InteraccionController($mdDialog, $interval) {
+  function InteraccionController($mdDialog, $interval, InteraccionService) {
     var vm = this;
+
+    console.log("Tortu");
+
     vm.user = {
       usuario: ["Eva", "Alisson", "Silvia"],
       nombre: '',
@@ -16,6 +18,12 @@
       tipo: '',
       registro_bitacora: '127.0.0.1',
     };
+
+    InteraccionService.InsertarPeticion(vm.user.nombre, vm.user.telefono1, vm.user.canal, vm.user.tipo,
+     vm.user.tipo, vm.user.canal).then(function(response){
+        vm.response = response;
+    });
+
     vm.buttonEnabled = false;
     vm.showProgress = false;
     vm.reloadServer = 'Guardando';

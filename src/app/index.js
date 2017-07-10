@@ -22,9 +22,9 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies',
       })
       .state('home.interaccion', {
         url: '/interaccion',
-        templateUrl: 'app/views/interaccion.html',
         controller: 'InteraccionController',
         controllerAs: 'vm',
+        templateUrl: 'app/views/interaccion.html',
         data: {
           title: 'Interaccion'
         }

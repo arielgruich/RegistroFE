@@ -1,4 +1,5 @@
-angular.module('app', ['angularSoap'])
+
+angular.module('app')
 
 .factory("InteraccionService", ['$soap',function($soap){
     var base_url = "http://localhost:8080/Registro/RegistroWS?wsdl";
@@ -9,11 +10,3 @@ angular.module('app', ['angularSoap'])
         }
     }
 }])
-
-.controller('InteraccionController', function($scope, InteraccionService) {
-
-  InteraccionService.InsertarPeticion($scope.Nombre, $scope.Telefono1, $scope.Canal, $scope.Tipo, $scope.UsuarioBitacora, $scope.RegistroBitacora).then(function(response){
-    $scope.response = response;
-  });
-
-})
