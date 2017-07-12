@@ -2,7 +2,7 @@
 angular.module('app')
 
 .factory("InteraccionService", ['$soap',function($soap){
-    var base_url = "http://localhost:8080/Registro/RegistroWS?wsdl";
+    var base_url = "http://172.20.16.184:8080/Registro/RegistroWS";
 
     return {
         InsertarPeticion: function(usuario, nombre, telefono1, canal, tipo, registro_bitacora){

@@ -20,8 +20,8 @@
     };
 
     InteraccionService.InsertarPeticion(vm.user.nombre, vm.user.telefono1, vm.user.canal, vm.user.tipo,
-     vm.user.tipo, vm.user.canal).then(function(response){
-        vm.response = response;
+     vm.user.tipo, vm.user.canal).then(function(respose){
+        vm.respose = respose;
     });
 
     vm.buttonEnabled = false;
